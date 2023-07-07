@@ -1,0 +1,148 @@
+/*Section3*/
+.section3{
+    padding: 10px;
+    margin: 10% 20%;
+}
+
+.mainTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.belowTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    min-height: 20rem;
+    min-width: 15rem;
+}
+
+.item img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    pointer-events: none;
+}
+
+.inner-carousel {
+    display: flex;
+}
+
+.carousel{
+    cursor: grab;
+    overflow: hidden;
+}
+
+.arrow{
+    display: flex;
+}
+
+
+
+/*Section4*/
+.section4 {
+    padding: 5px;
+    margin: 10% 20%;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flipper-container{
+    position:relative;
+    margin:35px auto;
+    perspective:1000;
+    width:450px;
+    height:300px;
+}
+
+.nft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip{
+    height:100%;
+    width:100%;
+    transform-style:preserve-3d;
+    transition:all 1s;
+}
+.flipper-container:hover .flip{
+    transform:rotateY(180deg);
+}
+.face{
+    position:absolute;
+    height:100%;
+    width:100%;
+    backface-visibility:hidden;
+}
+.face.back {
+    transform: rotateY(180deg);
+    text-align: center;
+}
+.back h2{
+    padding:70px 0px;
+    font-family:Pacifico;
+    letter-spacing:1px;
+    font-size:30px;
+}
+  
+/* Section 5 */
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+
+.section5 {
+    padding: 5px;
+    margin: 10% 20%;
+    font-family: 'Roboto Mono', monospace;
+    height: 100%;
+}
+
+.Arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.extra-bold {
+    text-emphasis-color: "-webkit-linear-gradient(45deg, rgba(232, 248, 248, 1), rgba(100, 227, 227, 1), rgba(224, 100, 227, 1))";
+}
+
+/* Section 6 */
+.section6 {
+    padding: 1px;
+    margin: 10% 20%;
+}
+
+/* Section 7 */
+.section7 {
+    padding: 10%;
+}
+
+.contains{
+    background: #06070a;
+    box-sizing: border-contains;
+    overflow: hidden;
+    box-shadow: 0 20px 50px #71e5e5;
+    border: 2px solid #94b1e3;
+    color: white;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.rows {
+    display: flex;
+    /* justify-content: space-between;
+    align-items: center; */
+}
+
+.row-item {
+    min-width: 20rem;
+}
