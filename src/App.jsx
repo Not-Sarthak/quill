@@ -6,17 +6,19 @@ import Community from "./pages/Community";
 import Create from "./pages/Create";
 import Footer from "../src/components/Footers/MainFooter";
 import Navbar from "../src/components/Navbars/MainNavbar";
-
+import AuthProvider from "./utils/AuthContext";
 
 const App = () => {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/community" element={<Community />} />
-        <Route path="/create" element={<Create />} />
-      </Routes>
-    </div>
+    <AuthProvider>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/create" element={<Create />} />
+        </Routes>
+      </div>
+    </AuthProvider>
   );
 };
 

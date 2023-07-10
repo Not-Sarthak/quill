@@ -110,7 +110,7 @@ const Navbar = () => {
               </LinkButton>
 
               <LinkButton spacing={0.5}>
-                <Typography variant="body2">Create</Typography>
+                <Typography variant="body2"><a href="create">Create</a></Typography>
                 <CallMadeIcon sx={{ fontSize: 12 }} />
               </LinkButton>
             </Stack>
