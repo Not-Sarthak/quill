@@ -29,15 +29,11 @@ const Home = () => {
         <Section7 />
         <Section5 />
         <Section6 />
-
-        <Section8 />
-        <Section9 />
-        <Section10 />
-        <Section11 />
-
+        
         {/* Footer */}
         <Footer />
       </Box>
+
     </div>
   );
 };

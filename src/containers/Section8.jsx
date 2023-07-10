@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Search from '../components/Search/Search';
+import "../App.css";
 
 const Section8 = () => {
   return (
-    <div></div>
+    <div className="section8">
+      <Search/>
+    </div>
   )
 }
 

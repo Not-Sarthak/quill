@@ -8,6 +8,7 @@ import {
   useTheme,
 } from "@mui/material";
 import React, { Children } from "react";
+import { useState } from "react";
 import { NAVBAR_HEIGHT } from "../../constants";
 import useScrollPosition from "../../hooks/useScrollPosition";
 import { navbarContent } from "../../utils/content";
@@ -16,6 +17,7 @@ import CallMadeIcon from "@mui/icons-material/CallMade";
 import LanguageIcon from "@mui/icons-material/Language";
 import MenuIcon from "@mui/icons-material/Menu";
 import Connect from "../Buttons/Connect";
+import "../../App.css";
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 
 const { Logo } = navbarContent;
@@ -37,6 +39,13 @@ const LinkButton = ({ children, ...props }) => (
 );
 
 const Navbar = () => {
+
+  const [showMenu, setshowMenu] = useState(false);
+
+  const toggle = () => {
+    setshowMenu(!showMenu);
+  }
+
   const scrollPosition = useScrollPosition();
 
   const theme = useTheme();
@@ -99,7 +108,7 @@ const Navbar = () => {
               </LinkButton>
 
               <LinkButton spacing={0.5}>
-                <Typography variant="body2">About</Typography>
+                <Typography variant="body2">Create</Typography>
                 <CallMadeIcon sx={{ fontSize: 12 }} />
               </LinkButton>
             </Stack>
@@ -113,11 +122,10 @@ const Navbar = () => {
           ) : (
             <Stack direction="row" spacing={5} alignItems="center">
               <LinkButton spacing={1}>
-                <AccountCircleRoundedIcon fontSize="large" />
+                <AccountCircleRoundedIcon fontSize="large"/>
                 <Typography variant="body2"></Typography>
               </LinkButton>
-
-              <Connect sx={{ borderRadius: 3 }} />
+              <Connect sx={{ borderRadius: 3 }}/>
             </Stack>
           )}
         </Stack>

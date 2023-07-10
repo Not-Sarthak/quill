@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "FashionX",
+        "tag": "@0xFashionX",
+        "image": "src/assets/images/section8/image2.png",
+        "price": "2 Flow",
+        "description": "The most suitable blog community for fashion lovers.",
+        "category": "Fashion"
+    },
+    {
+        "id": 1,
+        "name": "CoffeeDAO",
+        "tag": "@sarthak",
+        "image": "src/assets/images/section8/image1.png",
+        "price": "0.5 Flow",
+        "description": "Wake up yourself everyday with our coffee blogs.",
+        "category": "Food"
+    },
+    {
+        "id": 1,
+        "name": "Fitness Freaks",
+        "tag": "@0xGym",
+        "image": "src/assets/images/section8/image3.png",
+        "price": "$1.5 Flow",
+        "description": "Train your brain alongisde your body with our fitness blogs.",
+        "category": "Fitness"
+    }
+]

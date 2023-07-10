@@ -16,6 +16,11 @@ const themeTypography = {
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent"
     },
+    body3: {
+      fontSize: "0.95rem",
+      fontWeight: 400,
+      color: "#a4b8b6",
+    },
     body2: {
       fontSize: "0.95rem",
       fontWeight: 400,

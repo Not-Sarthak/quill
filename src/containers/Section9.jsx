@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Create from '../components/Create/Create'
 const Section9 = () => {
   return (
-    <div></div>
+    <div className='section9'>
+      <Create />
+    </div>
   )
 }
 
