@@ -1,6 +1,7 @@
 import { useState } from "react";
 import * as fcl from "@onflow/fcl";
 import { NFTStorage } from "nft.storage";
+import "../App.css";
 
 export default function Section9() {
   const [name, setName] = useState('');
@@ -14,7 +15,7 @@ export default function Section9() {
         <div className='heading-box'>
           <h1 className='form-heading'>Create Your Community</h1>
         </div>
-        <div className="part-1">
+        <div className="part-one">
           <div className='subpart-1'>
             <h1 className="one-heading">1. Configure</h1>
             <div className='subsubpart-one'>
@@ -41,7 +42,7 @@ export default function Section9() {
             <h1 className="text-white">2. Preview</h1>
             <div className='nope'>
               <div className="nope-two">
-                <img src='' className="image-under" alt="dummy" />
+                {preview ? <img src={preview} className="image-under" alt="dummy" /> : <img src='' className="image-under-under" alt="dummy" />}
               </div>
               <div className='disp'>
                 <h1 className='inner-name'>{name}</h1>

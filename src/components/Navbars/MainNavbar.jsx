@@ -95,7 +95,7 @@ const Navbar = () => {
               </LinkButton>
 
               <LinkButton>
-                <Typography variant="body2"><a href="community">Communities</a></Typography>
+                <Typography variant="body2"><a href="community" style={{color: "inherit", textDecoration: "none",}}>Communities</a></Typography>
                 <KeyboardArrowDownIcon fontSize="small" />
               </LinkButton>
 
@@ -110,7 +110,7 @@ const Navbar = () => {
               </LinkButton>
 
               <LinkButton spacing={0.5}>
-                <Typography variant="body2"><a href="create">Create</a></Typography>
+                <Typography variant="body2"><a href="create" style={{color: "inherit", textDecoration: "none",}}>Create</a></Typography>
                 <CallMadeIcon sx={{ fontSize: 12 }} />
               </LinkButton>
             </Stack>
