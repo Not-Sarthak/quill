@@ -42,7 +42,6 @@ const Section7 = () => {
       <div className='contains'>
       <ul className='rows'>
         <li className='row-item'>Easy to use</li>
-        <li className='row-item'>Unlimited subs/e-mails</li>
         <li className='row-item'>Decentralised</li>
         <li className='row-item'>Open source</li>
       </ul>
@@ -50,12 +49,10 @@ const Section7 = () => {
         <li className='row-item'>Stored on Flow Account Storage</li>
         <li className='row-item'>Niftory Walletless Onboarding</li>
         <li className='row-item'>No ads / No trackers</li>
-        <li className='row-item'>Optimized for SEO</li>
       </ul>
       <ul className='rows'>
         <li className='row-item'>Custom Domain</li>
         <li className='row-item'>Writing NFTs</li>
-        <li className='row-item'>In-depth Analytics</li>
         <li className='row-item'>Ownership</li>
       </ul>
       </div>

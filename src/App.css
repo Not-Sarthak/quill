@@ -146,12 +146,16 @@
     color: white;
     padding: 20px;
     border-radius: 30px;
+    font-family: "Poppins, sans-serif";
+    font-size: 1.2rem;
 }
-
+.row-item{
+    margin-left: 2px;
+}
 .rows {
     display: flex;
-    /* justify-content: space-between;
-    align-items: center; */
+    justify-content: space-between;
+    align-items: center; 
 }
 
 .row-item {
@@ -172,7 +176,3 @@
 }
 
 /* Create Community Form */
-
-
-
-

@@ -19,7 +19,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Connect from "../Buttons/Connect";
 import "../../App.css";
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
-
+import Community from "../../pages/Community";
 const { Logo } = navbarContent;
 
 const LinkButton = ({ children, ...props }) => (
@@ -93,7 +93,7 @@ const Navbar = () => {
               </LinkButton>
 
               <LinkButton>
-                <Typography variant="body2">Communities</Typography>
+                <Typography variant="body2"><a href="community">Communities</a></Typography>
                 <KeyboardArrowDownIcon fontSize="small" />
               </LinkButton>
 
