@@ -26,8 +26,8 @@ const Home = () => {
       
       <Box sx={{ bgcolor: "background.default", position: "relative" }}>
         <Section3 />
-        <Section4 />
         <Section7 />
+        <Section4 />
         <Section5 />
         <Section6 />
         
