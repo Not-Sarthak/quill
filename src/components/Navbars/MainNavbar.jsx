@@ -19,6 +19,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Connect from "../Buttons/Connect";
 import "../../App.css";
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+import { useAuth } from "../../utils/AuthContext";
 
 const { Logo } = navbarContent;
 
@@ -39,7 +40,7 @@ const LinkButton = ({ children, ...props }) => (
 );
 
 const Navbar = () => {
-
+  const { user, logOut, logIn } = useAuth();
   const [showMenu, setshowMenu] = useState(false);
 
   const toggle = () => {
@@ -125,6 +126,7 @@ const Navbar = () => {
                 <AccountCircleRoundedIcon fontSize="large"/>
                 <Typography variant="body2"></Typography>
               </LinkButton>
+              <Typography variant="body2">{user.addr}</Typography>
               <Connect sx={{ borderRadius: 3 }}/>
             </Stack>
           )}
