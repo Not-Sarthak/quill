@@ -13,10 +13,11 @@ import Section6 from "../containers/Section6";
 import Section7 from "../containers/Section7";
 import Section8 from "../containers/Section8";
 import Section9 from "../containers/Section9";
-
+import AuthProvider from "../utils/AuthContext";
 const Home = () => {
   return (
-    <div>
+    <AuthProvider>
+      <div>
       {/* Navbar */}
       <Navbar />
 
@@ -35,6 +36,7 @@ const Home = () => {
       </Box>
 
     </div>
+    </AuthProvider>
   );
 };
 
