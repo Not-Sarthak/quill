@@ -176,3 +176,12 @@
 }
 
 /* Create Community Form */
+/* Section9 */
+.section9 {
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+}
+.inner-box{
+    
+}
