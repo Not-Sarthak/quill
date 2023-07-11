@@ -13,17 +13,21 @@ export default function Section9() {
     <div className='section9'>
       <div className='inner-box'>
         <div className='heading-box'>
-          <h1 className='form-heading'>Create Your Community</h1>
+          <h2 className='form-heading'>Create Your Own Community</h2>
+          <h4 className='form-subheading'>Welcome onboard with us!</h4>
         </div>
         <div className="part-one">
           <div className='subpart-1'>
-            <h1 className="one-heading">1. Configure</h1>
+            <h1 className="one-heading">1. Upload Banner Image</h1>
             <div className='subsubpart-one'>
               <div className="preview-section">
                 <label className="label-section" htmlFor="upload-button">
                   {
                     preview ? <img src={preview} className="banner" alt="dummy" /> :
-                      <h1>upload banner image</h1>
+                    <div>
+                      <h1>Upload Banner Image</h1>
+                      <p>Note: This image will be used for writing NFT</p>
+                    </div>
                   }
                 </label>
                 <input className="hidden" id="upload-button" type="file" onChange={(e) => uploadToIPFS(e.target.files[0])} />

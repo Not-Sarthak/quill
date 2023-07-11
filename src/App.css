@@ -201,7 +201,7 @@
     margin-bottom: 2rem;
 }
 .form-heading{
-    background: -webkit-linear-gradient(#eee, #333);
+    background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 24px;
@@ -209,6 +209,19 @@
     text-align: center;
     font-family: "Poppins, sans-serif";
     font-size: 90.386px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.form-subheading{
+    background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Poppins, sans-serif";
+    font-size: 70.386px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -226,11 +239,13 @@
 }
 .one-heading{
     color: white;
+    padding-left: 2rem;
 }
 .subsubpart-one{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-left: 20px;
 }
 .preview-section{
     display: flex;
@@ -240,13 +255,25 @@
 }
 .label-section{
     border: 1px solid;
-    border-radius: 16px;
-    height: 48rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
-    color: white;
+    background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     overflow: hidden;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 408px;
+    height: 308px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0.8;
+    background: #141414;
 }
 .banner{
     border-radius: 16px;
@@ -262,18 +289,30 @@
     color: #ccc;
     font-size: 14px;
     margin-bottom: 3rem;
+    color: red;
 }
 .name-input{
-    padding: 7px;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    width: 100%;
-    outline: none;
-    color: #ccc;
-    border-color: #38E8C6;
-    background-color: #00344B;
-    border: 1px solid #ccc;
-    border-radius: 16px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 408px;
+    height: 88px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0.8;
+    background: #141414;
+    color: white;
 }
 .desc{
     display: flex;
@@ -285,16 +324,26 @@
     margin-bottom: 3rem;
 }
 .description-textarea{
-    border-radius: 16px;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding: 7px;
-    background-color: #00344B;
-    border: 1px solid #ccc;
-    outline: none;
-    border-color: #38E8C6;
-    color: #ccc;
-    width: 100%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 408px;
+    height: 108px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0.8;
+    background: #141414;
 }
 .preview-section{
     width: 50%;
@@ -305,16 +354,29 @@
     color: white;
 }
 .nope{
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-    background-color: #00384b;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    -webkit-box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
+    background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 408px;
+    height: 108px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0.8;
+    background: #141414;
 }
 .nope-two{
-    height: 48rem;
+    height: 48px;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -345,20 +407,20 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    color: #888;
+    color: red;
     margin-bottom: 12rem
 }
 .mem{
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 5rem;
     margin-bottom: 1rem;
     margin-right: 2rem;
     color: #008000;
-    border-radius: 50%;
+    border-radius: 30%;
     padding: 3px;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
     background-color: #222;
     max-width: 100%;
     position: absolute;
@@ -366,13 +428,7 @@
     right: 0;
 }
 .final-button{
-    border-radius: 16px;
-    padding: 7px;
-    font-size: 18px;
-    font-weight: 600;
-    margin-top: 5rem;
-    background-color: #2bbc9f;
-    width: 100%;
+
 }
 
 /* Add Blog Form */
@@ -386,3 +442,49 @@
     border: 1px solid #719c96;
     border-top: none;
 }
+
+/* Section11 */
+.section11{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.singlePage {
+    padding: 50px 0;
+  }
+  .singlePage .right {
+    margin-top: 30px;
+  }
+  .singlePage img {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+  }
+  .singlePage h1 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .singlePage p {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 2;
+    text-transform: capitalize;
+  }
+  .singlePage .buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .singlePage .button {
+    margin-left: 20px;
+    border: none;
+  }
+  .singlePage .button:nth-child(1) {
+    background: #10ac84;
+  }
+  .singlePage .button:nth-child(2) {
+    background: #ee5253;
+  }
+  

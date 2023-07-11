@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Community from "./pages/Community";
 import Create from "./pages/Create";
 import Add from "./pages/Add";
+import Details from "./pages/Details";
 import Footer from "../src/components/Footers/MainFooter";
 import Navbar from "../src/components/Navbars/MainNavbar";
 import AuthProvider from "./utils/AuthContext";
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/community" element={<Community />} />
           <Route path="/create" element={<Create />} />
           <Route path="/add" element={<Add />} />
+          <Route path="/details/:id" element={<Details />} />
         </Routes>
       </div>
     </AuthProvider>
