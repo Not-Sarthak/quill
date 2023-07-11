@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import './style.css';
-import data from "./TemplateData.json";
+import data from "./Communities.json";
 import Join from "../Buttons/Join";
 import Create from "../Buttons/Create";
 
@@ -18,16 +18,9 @@ function App() {
         <div className="template_Container">
           {
             data 
-              .filter((val) => {
-                if(searchTerm == ""){
-                  return val;
-                }else if(val.title.toLowerCase().includes(searchTerm.toLowerCase())){
-                  return val;
-                }
-              })
               .map((val) => {
                 return(
-                  <div className="main_box">
+                  <div className="main_box" key={val.id}>
                   <div className="template">
                     <div className="box1">
                         <div className="box2">
