@@ -66,27 +66,6 @@ export default function Section9() {
   }
 
   return (
-<<<<<<< HEAD
-    <div className='section9'>
-      <div className='inner-box'>
-        <div className='heading-box'>
-          <h2 className='form-heading'>Create Your Own Community</h2>
-          <h4 className='form-subheading'>Welcome onboard with us!</h4>
-        </div>
-        <div className="part-one">
-          <div className='subpart-1'>
-            <h1 className="one-heading">1. Upload Banner Image</h1>
-            <div className='subsubpart-one'>
-              <div className="preview-section">
-                <label className="label-section" htmlFor="upload-button">
-                  {
-                    preview ? <img src={preview} className="banner" alt="dummy" /> :
-                    <div>
-                      <h1>Upload Banner Image</h1>
-                      <p>Note: This image will be used for writing NFT</p>
-                    </div>
-                  }
-=======
     <div className="section9">
       <div className="inner-box">
         <div className="heading-box">
@@ -103,7 +82,6 @@ export default function Section9() {
                   ) : (
                     <h1>upload banner image</h1>
                   )}
->>>>>>> 65749461bead0542383eef81742fb71c9ea15cb1
                 </label>
                 <input
                   className="hidden"
