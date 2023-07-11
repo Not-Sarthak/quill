@@ -9,7 +9,7 @@
         "category": "Fashion"
     },
     {
-        "id": 1,
+        "id": 2,
         "name": "CoffeeDAO",
         "tag": "@sarthak",
         "image": "src/assets/images/section8/image1.png",
@@ -18,7 +18,7 @@
         "category": "Food"
     },
     {
-        "id": 1,
+        "id": 3,
         "name": "Fitness Freaks",
         "tag": "@0xGym",
         "image": "src/assets/images/section8/image3.png",
