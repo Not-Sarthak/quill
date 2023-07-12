@@ -441,6 +441,140 @@
     border-radius: 30px;
     border: 1px solid #719c96;
     border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem;
+    width: 50%;
+    margin-left: 22rem;
+}
+.add-blog{
+    background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Poppins, sans-serrif";
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.inputfile{
+    display: flex;
+    flex-direction: column;
+}
+.boxItems{
+    margin: 3rem;
+}
+.form-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 2rem;
+}
+.file-input{
+    border: 1px solid #2b9392;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 408px;
+    height: 108px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+.title-input{
+    border: 1px solid #2b9392;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 408px;
+    height: 50px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+.description-content{
+    border: 1px solid #2b9392;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 408px;
+    height: 80px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+.author-content{
+    border: 1px solid #2b9392;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 408px;
+    height: 50px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+#blog-content{
+    border: 1px solid #2b9392;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 408px;
+    height: 300px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0.8;
 }
 
 /* Section11 */
@@ -454,6 +588,7 @@
   }
   .singlePage .right {
     margin-top: 30px;
+    
   }
   .singlePage img {
     width: 80%;
@@ -462,6 +597,25 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    border: 1px solid #2b9392;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 408px;
+    height: 300px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0.8;
 
   }
   .singlePage h1 {
@@ -478,14 +632,5 @@
     display: flex;
     justify-content: flex-end;
   }
-  .singlePage .button {
-    margin-left: 20px;
-    border: none;
-  }
-  .singlePage .button:nth-child(1) {
-    background: #10ac84;
-  }
-  .singlePage .button:nth-child(2) {
-    background: #ee5253;
-  }
+
   
