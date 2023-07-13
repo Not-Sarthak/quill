@@ -235,6 +235,9 @@
 .third-part{
     border: none;
 }
+.inside{
+    padding-left: 8px;
+}
 .form-boxes{
     border: 1px solid #2b9392;
     border-radius: 20px;

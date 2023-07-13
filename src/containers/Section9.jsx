@@ -100,7 +100,7 @@ export default function Section9() {
       <div className="third-part">
         <label className="description"><h1 className="form-steps">3. Description</h1></label>
         <textarea
-          className="form-boxes"
+          className="form-boxes inside"
           rows={8}
           onChange={(e) => setDescription(e.target.value)}
           placeholder="This is a community filled with Coffee enthusiasts"
