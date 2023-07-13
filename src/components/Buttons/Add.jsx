@@ -12,7 +12,7 @@ import {
 
 const Add = () => {
   return (
-    <Button>
+    <Button type="submit">
       <div
         className="Button"
         style={{
