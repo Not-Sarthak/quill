@@ -5,6 +5,13 @@ const Section12 = () => {
   return (
     <div className="section12">
         <Join />
+        <div className="">
+          <div className="">
+            <div className="">
+              
+            </div>
+          </div>
+        </div>
     </div>
   )
 }

@@ -1,0 +1,51 @@
+.nav-link {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #A8F0E6;
+    position: relative;
+    opacity: 0.75;
+  }
+  
+  .nav-link:hover {
+    opacity: 1;
+  }
+  
+  .nav-link::before {
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #A8F0E6;
+  }
+  
+  .nav-link-ltr::before {
+    width: 0%;
+    bottom: 10px;
+  }
+  
+  .nav-link-ltr:hover::before {
+    width: 100%;
+  }
+
+  .headline{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #719c96;
+    border-radius: 30px;
+    font-family: "Jakarta Sans";
+    width: 50%;
+    box-shadow: #A8F0E6 0px 0px 10px 0px;
+  }
+  .headline-text{
+    display: flex;
+    flex-direction: column;
+    line-height: 1px;
+    margin-left: 100px;
+  }
+  .main{
+    margin-right: 20px;
+  }
