@@ -67,7 +67,7 @@ const Section11 = () =>{
             </div>
             <div className="blog-heading-details">
               <b><h1  style={{display: "flex", justifyContent:"space-between", fontFamily:"Merriweather", color: "#64CCC5", fontSize:60}}>{blogs.title}</h1></b>
-              <h3 style={{ fontFamily:"Merriweather", color: "#468B97", display: "flex", justifyContent: "center", alignItems: "center"}}>{blogs.desc}</h3>
+              <h3 style={{ fontFamily:"Merriweather", color: "white", display: "flex", justifyContent: "center", alignItems: "center"}}>{blogs.desc}</h3>
             </div>
             <hr style={{width: "60%", height: "1px", background: "#6de5e5", border: "none",}}/>
             <main className="" style={{position: "relative", top: "10px", left: "20px", maxWidth: "1200px", margin: "0 auto", padding: "20px",}}>
