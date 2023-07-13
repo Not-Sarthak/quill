@@ -3,6 +3,7 @@ anyio
 blinker
 click
 Flask
+gunicorn
 h11
 httptools
 idna
