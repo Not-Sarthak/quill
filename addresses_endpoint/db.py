@@ -79,9 +79,9 @@ def create_table():
 
 
 
-if __name__ == '__main__':
-    # create_db(r"./addresses.db")
-    # create_table()
-    # insert_address("0x123456789")
-    # insert_address("0x987654321")
-    print(get_addresses())
+# if __name__ == '__main__':
+#     # create_db(r"./addresses.db")
+#     # create_table()
+#     # insert_address("0x123456789")
+#     # insert_address("0x987654321")
+#     print(get_addresses())
