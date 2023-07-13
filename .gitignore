@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# python
+addresses_endpoint/__pycache__/*
+addresses_endpoint/venv/*
+addresses_endpoint/addresses.db
