@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './style.css';
 import data from "./Communities.json";
-import Join from "../Buttons/Join";
+import Explore from "../Buttons/Explore";
 import Create from "../Buttons/Create";
 
 function App() {
@@ -31,8 +31,7 @@ function App() {
                       <div className="tag_container">{val.tag}</div>           
                       <div className="description_container">{val.description}</div>
                       <div className="box3">
-                        <div className="category_container">{val.category}</div>
-                        <div className="button_container"><Join/></div>
+                        <div className="button_container"><Explore /></div>
                       </div>
                     </div>
                   </div>
