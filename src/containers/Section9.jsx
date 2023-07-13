@@ -13,6 +13,7 @@ import {
 } from "../flow/cadence_code(emulator)";
 import { v4 as uuidv4 } from "uuid";
 import "../flow/config";
+import { useNavigate } from "react-router-dom";
 
 export default function Section9() {
   const [name, setName] = useState("");
@@ -23,6 +24,7 @@ export default function Section9() {
   const { user } = useAuth();
   const NFT_STORAGE_TOKEN = import.meta.env.VITE_PUBLIC_NFTSTORAGE_KEY;
   const client = new NFTStorage({ token: NFT_STORAGE_TOKEN });
+  const navigate = useNavigate();
 
   async function uploadToIPFS(file) {
     let prev = URL.createObjectURL(file);
@@ -33,27 +35,6 @@ export default function Section9() {
 
   async function createBlogger() {
     fcl.config.put("0xBlogger", user.addr);
-    // const response = await fcl.query({
-    //   cadence: getAllBlogs,
-    //   args: () => [],
-    // });
-    // console.log(response);
-    // const addBlogsId = await fcl.mutate({
-    //   cadence: CreateBlog,
-    //   args: (arg, t) => [
-    //     arg("title", t.String),
-    //     arg("desc", t.String),
-    //     arg("body", t.String),
-    //     arg("author", t.String),
-    //     arg("ImgCID", t.String),
-    //     arg("PRIVATE", t.String),
-    //   ],
-    //   proposer: fcl.authz,
-    //   payer: fcl.authz,
-    //   authorizations: [fcl.authz],
-    //   limit: 999,
-    // });
-    // console.log("Blogs added:",addBlogsId);
     const deploymentID = await fcl.mutate({
       cadence: DeployContract,
       proposer: fcl.authz,
@@ -78,6 +59,7 @@ export default function Section9() {
       limit: 999,
     });
     console.log("Owner Details Set", settingID);
+    navigate("/add");
   }
 
   return (
