@@ -31,7 +31,6 @@ function App() {
                       <div className="tag_container">{val.tag}</div>           
                       <div className="description_container">{val.description}</div>
                       <div className="box3">
-                        <div className="category_container">{val.category}</div>
                         <div className="button_container"><Join/></div>
                       </div>
                     </div>
