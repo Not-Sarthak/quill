@@ -7,6 +7,7 @@ import Create from "./pages/Create";
 import Add from "./pages/Add";
 import Details from "./pages/Details";
 import Display from "./pages/Display";
+import Writer from "./pages/Writer";
 import Footer from "../src/components/Footers/MainFooter";
 import Navbar from "../src/components/Navbars/MainNavbar";
 import AuthProvider from "./utils/AuthContext";
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/add" element={<Add />} />
           <Route path="/details/:id" element={<Details />} />
           <Route path="/display" element={<Display />} />
+          <Route path="/writer" element={<Writer />} />
         </Routes>
       </div>
     </AuthProvider>
