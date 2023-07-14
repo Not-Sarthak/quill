@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify
 from db import get_addresses, insert_address
 import os
+from flask_cors import CORS
 
 app = Flask(__name__)
+
+CORS(app, origins='http://localhost:5173')
 
 # get env variable
 API_KEY = os.environ.get('API_KEY')
@@ -35,8 +38,15 @@ def bloggers_add():
     # Check if the address is present in the request
     if request.args.get('address') is None:
         return jsonify({'error': 'Address missing'}), 400
+    
+    other_data = ['name', 'avatar', 'bio', 'subscriptionCost']
+    other_data_values = [None, None, None, None]
+    for d in other_data:
+        if request.args.get(d) is None:
+            return jsonify({'error': f'{d} missing'}), 400
+        other_data_values[d] = str(request.args.get(d))
 
-    if insert_address(str(request.args.get('address'))):
+    if insert_address(str(request.args.get('address')), *other_data_values):
         return jsonify({'message': 'Address added'}), 201
     
     return jsonify({'error': 'Address already exists'}), 400
