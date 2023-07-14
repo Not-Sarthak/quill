@@ -75,7 +75,7 @@ export default function Section9() {
                     {preview ? (
                       <img src={preview} className="banner" alt="dummy" />
                     ) : (
-                      <h1 className="img-data">Upload Banner Image/Logo</h1>
+                      <h1 className="img-data">Upload Community Logo</h1>
                     )}
           </label>
           <input
