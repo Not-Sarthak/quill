@@ -9,7 +9,6 @@ CORS(app, origins='http://localhost:5173')
 
 # get env variable
 API_KEY = os.environ.get('API_KEY')
-API_KEY = 'OK'
 
 @app.route('/bloggers', methods=['GET'])
 def bloggers_get():
