@@ -670,13 +670,13 @@ transaction(title: String, description: String, body: String, author: String, ba
 
         BlogManager.createBlog(title:title,description:description,body:body,author:author,bannerImg:bannerImg,type:self.blogType, blogCollection: blogCollectionRef)
 
-        BlogManager.createBlog(title:"First Blog",description:"First Blog",body:"First Blog",author:"XYZ",bannerImg:"",type:BlogManager.BlogType.PUBLIC, blogCollection: blogCollectionRef)
+        BlogManager.createBlog(title:"First Blog",description:"First Blog",body:"First Blog",author:"XYZ",bannerImg:"bafkreiht62nxf35qf22kw2h4cis7qr2ls4y7fgvrthr6eyjz6mfabc7v2u",type:BlogManager.BlogType.PUBLIC, blogCollection: blogCollectionRef)
 
-        BlogManager.createBlog(title:"Second Blog",description:"Second Blog",body:"Second Blog",author:"XYZ",bannerImg:"",type:BlogManager.BlogType.PUBLIC, blogCollection: blogCollectionRef)
+        BlogManager.createBlog(title:"Second Blog",description:"Second Blog",body:"Second Blog",author:"XYZ",bannerImg:"bafkreiht62nxf35qf22kw2h4cis7qr2ls4y7fgvrthr6eyjz6mfabc7v2u",type:BlogManager.BlogType.PUBLIC, blogCollection: blogCollectionRef)
 
-        BlogManager.createBlog(title:"Third Blog",description:"Third Blog",body:"Third Blog",author:"XYZ",bannerImg:"",type:BlogManager.BlogType.PRIVATE, blogCollection: blogCollectionRef)
+        BlogManager.createBlog(title:"Third Blog",description:"Third Blog",body:"Third Blog",author:"XYZ",bannerImg:"bafkreiht62nxf35qf22kw2h4cis7qr2ls4y7fgvrthr6eyjz6mfabc7v2u",type:BlogManager.BlogType.PRIVATE, blogCollection: blogCollectionRef)
 
-        BlogManager.createBlog(title:"Fourth Blog",description:"Fourth Blog",body:"Fourth Blog",author:"XYZ",bannerImg:"",type:BlogManager.BlogType.PRIVATE, blogCollection: blogCollectionRef)
+        BlogManager.createBlog(title:"Fourth Blog",description:"Fourth Blog",body:"Fourth Blog",author:"XYZ",bannerImg:"bafkreiht62nxf35qf22kw2h4cis7qr2ls4y7fgvrthr6eyjz6mfabc7v2u",type:BlogManager.BlogType.PRIVATE, blogCollection: blogCollectionRef)
 
     }
 }
