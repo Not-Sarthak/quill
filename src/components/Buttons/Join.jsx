@@ -15,14 +15,14 @@ import { Subscribe, isSubscribed } from "../../flow/cadence_code_emulator";
 import { useAuth } from "../../utils/AuthContext";
 
 const Join = (props) => {
-  useEffect(() => {
-    checkSub();
-  }, []);
   const { user } = useAuth();
-
-  // console.log(props);
   const { id } = useParams();
   const [sub, setSub] = useState(false);
+  useEffect(() => {
+    checkSub();
+  }, [user.addr]);
+
+  // console.log(props);
   async function handleJoin() {
     fcl.config.put("0xBlogger", id);
     let joinId = await fcl.mutate({
@@ -33,7 +33,8 @@ const Join = (props) => {
       authorizations: [fcl.authz],
       limit: 999,
     });
-    // console.log(joinId);
+    checkSub();
+    console.log(joinId);
   }
   async function checkSub() {
     fcl.config.put("0xBlogger", id);
@@ -41,8 +42,7 @@ const Join = (props) => {
       cadence: isSubscribed,
       args: (arg, t) => [arg(user.addr, t.Address)],
     });
-    console.log(response);
-    setSub(response);
+    response.then((data) => setSub(data)).catch(setSub(false));
   }
   return (
     <Button onClick={handleJoin} disabled={sub}>
