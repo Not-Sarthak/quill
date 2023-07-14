@@ -95,6 +95,17 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 // Navbar
 import Logo from "../assets/images/logo.svg";
 
+// Blog
+import Blog1 from "../assets/images/blogs/b1.jpg";
+import Blog2 from "../assets/images/blogs/b2.jpg";
+import Blog3 from "../assets/images/blogs/b3.jpg";
+
+export const blogContent = {
+  Blog1,
+  Blog2,
+  Blog3,
+}
+
 export const section1Content = {
   MainBG,
   TreesImage,
