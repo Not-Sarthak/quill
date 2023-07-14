@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Section12 from '../containers/Section12';
 const Display = () => {
   return (
-    <div>Display</div>
+    <div>
+      <Section12 />
+    </div>
   )
 }
 
