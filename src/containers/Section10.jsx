@@ -5,7 +5,7 @@ import { useAuth } from "../utils/AuthContext";
 import { useNavigate } from "react-router-dom";
 import "../flow/config";
 import { Button, Typography } from "@mui/material";
-import { CreateBlog ,getAllBlogs} from "../flow/cadence_code(emulator)";
+import { CreateBlog ,getAllBlogs} from "../flow/cadence_code_emulator";
 import * as fcl from "@onflow/fcl";
 
 const Section10 = () => {

@@ -10,7 +10,7 @@ import {
   getOwnerInfo,
   getAllBlogs,
   CreateBlog,
-} from "../flow/cadence_code(emulator)";
+} from "../flow/cadence_code_emulator";
 import { v4 as uuidv4 } from "uuid";
 import "../flow/config";
 import { useNavigate } from "react-router-dom";

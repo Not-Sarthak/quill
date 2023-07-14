@@ -24,29 +24,47 @@ def connect():
     conn = sqlite3.connect(r"./addresses.db")
     return conn
 
-def insert_address(address):
+def insert_address(address, name, avatar, bio, subscriptionCost):
     check_n_setup(r"./addresses.db")
     try: 
         conn = connect()
         c = conn.cursor()
-        c.execute("INSERT INTO addresses(address) VALUES (?)", (address,))
+        c.execute("INSERT INTO addresses(address, name, avatar, bio, subscriptionCost) VALUES(?,?,?,?,?)",
+                  (address, name, avatar, bio, subscriptionCost))
         conn.commit()
         conn.close()
         return True
     
     except Exception as e:
-        print(e)
-        conn.close()
-        return False
+        
+        try:
+            conn = connect()
+            c = conn.cursor()
+            c.execute("UPDATE addresses SET name=?, avatar=?, bio=?, subscriptionCost=? WHERE address=?", (name, avatar, bio, subscriptionCost, address))
+            conn.commit()
+            conn.close()
+            return True
+        
+        except Exception as e:
+            return False
 
 def get_addresses():
     check_n_setup(r"./addresses.db")
     conn = connect()
     try: 
         c = conn.cursor()
-        c.execute("SELECT * FROM addresses")
+        c.execute("SELECT address, name, avatar, bio, subscriptionCost FROM addresses")
         rows = c.fetchall()
-        return [row[1] for row in rows]
+        data_dict = {}
+        for row in rows:
+            data_dict[row[0]] = {
+                "name": row[1],
+                "avatar": row[2],
+                "bio": row[3],
+                "subscriptionCost": row[4]
+            }
+
+        return data_dict
 
     finally:
         conn.close()
@@ -70,6 +88,10 @@ def create_table():
                   CREATE TABLE IF NOT EXISTS addresses(
                     id INTEGER PRIMARY KEY
                   , address TEXT NOT NULL UNIQUE
+                  , name TEXT
+                  , avatar TEXT
+                  , bio TEXT
+                  , subscriptionCost TEXT
                   );''')
         
         conn.commit()
@@ -80,8 +102,8 @@ def create_table():
 
 
 # if __name__ == '__main__':
-#     # create_db(r"./addresses.db")
-#     # create_table()
-#     # insert_address("0x123456789")
-#     # insert_address("0x987654321")
+#     create_db(r"./addresses.db")
+#     create_table()
+#     insert_address("0x123456789", "test", "test", "test", "test")
+#     insert_address("0x987654321", "test1", "test1", "test1", "test1")
 #     print(get_addresses())

@@ -1,50 +1,29 @@
-import React, {useState} from "react";
-import './style.css';
-import data from "./Communities.json";
+import React, { useState, useEffect } from "react";
+import "./style.css";
+import data from "./Bloggers.json";
 import Explore from "../Buttons/Explore";
 import Create from "../Buttons/Create";
+import * as fcl from "@onflow/fcl";
+import { getOwnerInfo } from "../../flow/cadence_code_emulator";
+import BloggerCard from "../Cards/BloggerCard";
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const bloggers = data.Bloggers;
   return (
     <>
       <div className="templateContainer">
         <div className="searchInput_Container">
-          <input id="searchInput" type="text" placeholder="Search" onChange={(event) => {
-            setSearchTerm(event.target.value);
-          }} />
-          <Create/>
+          <input id="searchInput" type="text" placeholder="Search" />
+          <Create />
         </div>
-        <div className="template_Container">
-          {
-            data 
-              .map((val) => {
-                return(
-                  <div className="main_box" key={val.id}>
-                  <div className="template">
-                    <div className="box1">
-                        <div className="box2">
-                            <img src={val.image} alt="" />
-                            <div className="price_container">{val.price}</div> 
-                        </div>
-                      <div className="name_container">{val.name}</div>
-                      <div className="tag_container">{val.tag}</div>           
-                      <div className="description_container">{val.description}</div>
-                      <div className="box3">
-                        <div className="button_container"><Explore /></div>
-                      </div>
-                    </div>
-                  </div>
-                  </div> 
-                )
-              })
-          }
+        <div className="cards">
+          {bloggers.map((address,index) => {
+            return (<BloggerCard address={address} index={index} key={index}/>);
+          })}
         </div>
       </div>
     </>
-  )
+  );
 }
 
 export default App;
-
-
