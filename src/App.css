@@ -211,6 +211,10 @@
     -webkit-text-fill-color: transparent;
     font-size: 50px;
 }
+.banner{
+  height: 60%;
+  width: 60%;
+}
 .form-steps{
     background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);
     -webkit-background-clip: text;
