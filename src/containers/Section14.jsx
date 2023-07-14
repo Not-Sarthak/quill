@@ -4,7 +4,7 @@ import "../App.css";
 import "../components/Search/style.css";
 
 const Section14 = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <div
       className="headline"
@@ -71,7 +71,7 @@ const Section14 = (props) => {
           ></img>
           Cost : {props.cost}
         </div>
-        <Join />
+        <Join cost={props.cost} />
       </div>
     </div>
   );
