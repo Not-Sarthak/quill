@@ -3,7 +3,7 @@ import "../App.css"
 // import img from "../../assets/images/b5.jpg"
 import { BsPencilSquare } from "react-icons/bs"
 import { AiOutlineDelete } from "react-icons/ai"
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
 import { useEffect } from "react"
 import { blog } from "../utils/data"
 import {

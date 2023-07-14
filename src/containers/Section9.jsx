@@ -27,7 +27,7 @@ export default function Section9() {
     setPreview(prev);
     const cid = await client.storeBlob(file);
     setIpfsCid(cid);
-    console.log("Uploaded",ipfsCid);
+    console.log("Uploaded",cid);
   }
 
   async function createBlogger() {
