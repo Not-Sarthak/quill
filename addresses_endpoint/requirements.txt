@@ -3,6 +3,7 @@ anyio
 blinker
 click
 Flask
+Flask-Cors
 gunicorn
 h11
 httptools
