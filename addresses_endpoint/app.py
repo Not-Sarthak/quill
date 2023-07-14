@@ -9,6 +9,7 @@ CORS(app, origins='http://localhost:5173')
 
 # get env variable
 API_KEY = os.environ.get('API_KEY')
+API_KEY = 'OK'
 
 @app.route('/bloggers', methods=['GET'])
 def bloggers_get():
@@ -40,11 +41,11 @@ def bloggers_add():
         return jsonify({'error': 'Address missing'}), 400
     
     other_data = ['name', 'avatar', 'bio', 'subscriptionCost']
-    other_data_values = [None, None, None, None]
+    other_data_values = []
     for d in other_data:
         if request.args.get(d) is None:
             return jsonify({'error': f'{d} missing'}), 400
-        other_data_values[d] = str(request.args.get(d))
+        other_data_values.append(str(request.args.get(d)))
 
     if insert_address(str(request.args.get('address')), *other_data_values):
         return jsonify({'message': 'Address added'}), 201
