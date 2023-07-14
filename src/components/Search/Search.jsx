@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
-import data from "./Bloggers.json";
 import Explore from "../Buttons/Explore";
 import Create from "../Buttons/Create";
 import * as fcl from "@onflow/fcl";
 import { getOwnerInfo } from "../../flow/cadence_code_emulator";
-import BloggerCard from "../Cards/BloggerCard";
+ 
 
 function App() {
   useEffect(() => {
@@ -23,7 +22,6 @@ function App() {
   }
   // console.log("Outside",Object.keys(bloggerData));
   return (
-    <>
       <div className="templateContainer">
         <div className="searchInput_Container">
           <input id="searchInput" type="text" placeholder="Search" />
@@ -53,7 +51,7 @@ function App() {
                       <div className="description_container">{info.bio}</div>
                       <div className="box3">
                         <div className="button_container">
-                          <Explore />
+                          <Explore address={address}/>
                         </div>
                       </div>
                     </div>
@@ -64,7 +62,6 @@ function App() {
           })}
         </div>
       </div>
-    </>
   );
 }
 

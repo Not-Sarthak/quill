@@ -14,6 +14,7 @@ const Individual = (props) => {
         <p>
             {props.text}
         </p>
+        <p>{props.type}</p>
         </div>
     </div>
   )
