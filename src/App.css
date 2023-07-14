@@ -273,19 +273,25 @@
 /* Add Blog Form */
 /* Section10 */
 .section10{
-    background: linear-gradient(180deg, rgba(6,7,10,1) 0%, rgba(6,7,10,1) 72%, rgba(75,113,97,1) 93%, rgba(92,164,131,1) 100%);
-    box-shadow: "#06070a";
-    backdrop-filter: blur( 1px );
-    -webkit-backdrop-filter: blur( 1px );
-    border-radius: 30px;
-    border: 1px solid #719c96;
-    border-top: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6rem;
-    width: 50%;
-    margin-left: 22rem;
+    margin: 60px;
+    padding: 60px;
+    flex-direction: column;
+    border: 3px solid;
+    border-image: 
+    linear-gradient(
+      to bottom, 
+      #4f7d69, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+    font-family: "Poppins, sans-serrif";
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
 }
 .add-blog{
     background: -webkit-linear-gradient(#97FEED, #35A29F, #0B666A);

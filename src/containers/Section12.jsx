@@ -1,17 +1,11 @@
 import React from 'react';
 import Join from "../components/Buttons/Join";
+import Navlist from "../components/Display/NavList";
 
 const Section12 = () => {
   return (
     <div className="section12">
-        <Join />
-        <div className="">
-          <div className="">
-            <div className="">
-              
-            </div>
-          </div>
-        </div>
+      <Navlist />
     </div>
   )
 }
