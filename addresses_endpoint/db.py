@@ -36,9 +36,17 @@ def insert_address(address, name, avatar, bio, subscriptionCost):
         return True
     
     except Exception as e:
-        print(e)
-        conn.close()
-        return False
+        
+        try:
+            conn = connect()
+            c = conn.cursor()
+            c.execute("UPDATE addresses SET name=?, avatar=?, bio=?, subscriptionCost=? WHERE address=?", (name, avatar, bio, subscriptionCost, address))
+            conn.commit()
+            conn.close()
+            return True
+        
+        except Exception as e:
+            return False
 
 def get_addresses():
     check_n_setup(r"./addresses.db")
