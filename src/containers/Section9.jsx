@@ -6,10 +6,6 @@ import { useAuth } from "../utils/AuthContext";
 import {
   DeployContract,
   SetOwnerDetails,
-  getContracts,
-  getOwnerInfo,
-  getAllBlogs,
-  CreateBlog,
 } from "../flow/cadence_code_emulator";
 import { v4 as uuidv4 } from "uuid";
 import "../flow/config";
@@ -31,6 +27,7 @@ export default function Section9() {
     setPreview(prev);
     const cid = await client.storeBlob(file);
     setIpfsCid(cid);
+    console.log("Uploaded",ipfsCid);
   }
 
   async function createBlogger() {
@@ -44,7 +41,6 @@ export default function Section9() {
     });
     console.log("Contract Deployed", deploymentID);
     await fcl.reauthenticate();
-    
     const settingID = await fcl.mutate({
       cadence: SetOwnerDetails,
       args: (arg, t) => [
@@ -60,6 +56,14 @@ export default function Section9() {
     });
     console.log("Owner Details Set", settingID);
     navigate("/add");
+    console.log(`https://quill-helper.onrender.com/bloggers?name=${name}&address=${user.addr}&bio=${description}&avatar=${ipfsCid}&subscriptionCost=${price}`);
+    const response = await fetch(`https://quill-helper.onrender.com/bloggers?name=${name}&address=${user.addr}&bio=${description}&avatar=${ipfsCid}&subscriptionCost=${price}`, {
+      method: "POST",
+      headers: {
+        KEY: import.meta.env.VITE_FLASK_KEY,
+      }
+    });
+    console.log(response);
   }
 
   return (
