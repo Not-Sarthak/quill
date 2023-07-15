@@ -62,7 +62,7 @@ const Section14 = (props) => {
       </div>
       <div
         className="type-headline"
-        style={{ paddingTop: "24px", paddingLeft: 82 }}
+        style={{  paddingLeft: 82 }}
       >
         <div className="price_container" style={{display: 'flex', justifyContent: 'space-between', margin:1}}>
         <div style={{padding: '10px'}}>
