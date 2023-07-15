@@ -1,5 +1,6 @@
 {
   "contracts": {
+    "SubscriptionsManager": "src/flow/SubscriptionsManager.cdc",
     "ExampleNFT": {
       "source": "",
       "aliases": {
@@ -58,6 +59,13 @@
     "emulator-account": {
       "address": "f8d6e0586b0a20c7",
       "key": "5a271c00177539eefa2836c558db9dfad1a483ab55a9e3ad01c65291e9b36289"
+    }
+  },
+  "deployments": {
+    "emulator": {
+      "emulator-account": [
+        "SubscriptionsManager"
+      ]
     }
   }
 }
