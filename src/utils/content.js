@@ -100,6 +100,14 @@ import Blog1 from "../assets/images/blogs/b1.jpg";
 import Blog2 from "../assets/images/blogs/b2.jpg";
 import Blog3 from "../assets/images/blogs/b3.jpg";
 
+// Section16
+import Section from "../assets/images/section16/section.png";
+
+export const section16Content = {
+  title: "100% Decentralized and On-chain",
+  Section,
+}
+
 export const blogContent = {
   Blog1,
   Blog2,

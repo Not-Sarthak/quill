@@ -13,6 +13,8 @@ import Section6 from "../containers/Section6";
 import Section7 from "../containers/Section7";
 import Section8 from "../containers/Section8";
 import Section9 from "../containers/Section9";
+import Section16 from "../containers/Section16";
+
 const Home = () => {
   return (
       <div>
@@ -24,6 +26,7 @@ const Home = () => {
       
       <Box sx={{ bgcolor: "background.default", position: "relative" }}>
         <Section3 />
+        <Section16 />
         <Section7 />
         <Section4 />
         <Section5 />

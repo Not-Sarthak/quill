@@ -24,7 +24,7 @@ function App() {
   return (
       <div className="templateContainer">
         <div className="searchInput_Container">
-          <input id="searchInput" type="text" placeholder="Search" />
+          <input id="searchInput" type="text" placeholder="Search" style={{color: 'white'}}/>
           <Create />
         </div>
         <div className="cards">
@@ -40,11 +40,11 @@ function App() {
                           src={`https://nftstorage.link/ipfs/${info.avatar}`}
                         />
                         <div className="price_container">
+                          Cost : {info.subscriptionCost}
                           <img
                             src="https://s2.coinmarketcap.com/static/img/coins/64x64/4558.png"
-                            className="logo"
+                            className="flow-logo"
                           ></img>
-                          Cost : {info.subscriptionCost}
                         </div>
                       </div>
                       <div className="name_container">{info.name}</div>

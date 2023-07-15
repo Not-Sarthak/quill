@@ -13,23 +13,23 @@ const Section14 = (props) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        border: "1px solid #0d4220",
+        border: "1px solid #37a4a0",
         borderRadius: 30,
-        width: "50%",
+        width: "60%",
       }}
     >
-      <div className="logo-img" style={{ paddingTop: "10px" }}>
+      <div className="logo-img" style={{}}>
         <img
           src={`https://nftstorage.link/ipfs/${props.avatar}`}
           alt="alt"
           loading={"lazy"}
           style={{
-            float: "left",
             width: "100px",
             height: "100px",
             borderRadius: "100%",
             overflow: "hidden",
             display: "flex",
+            border: "1px solid #37a4a0",
           }}
         />
       </div>
@@ -53,7 +53,7 @@ const Section14 = (props) => {
               justifyContent: "center",
               alignItems: "center",
               paddingBottom: 20,
-              paddingRight: 58,
+              paddingRight: 50,
             }}
           >
             {props.bio}
@@ -62,14 +62,17 @@ const Section14 = (props) => {
       </div>
       <div
         className="type-headline"
-        style={{ paddingTop: "24px", paddingLeft: 80 }}
+        style={{ paddingTop: "24px", paddingLeft: 82 }}
       >
-        <div className="price_container">
+        <div className="price_container" style={{display: 'flex', justifyContent: 'space-between', margin:1}}>
+        <div style={{padding: '10px'}}>
+          Cost : {props.cost}
+          </div>
           <img
             src="https://s2.coinmarketcap.com/static/img/coins/64x64/4558.png"
             className="logo"
+            style={{ width: "30px", height: "30px"}}
           ></img>
-          Cost : {props.cost}
         </div>
         <Join cost={props.cost} />
       </div>
