@@ -22,6 +22,7 @@ import { getAllBlogs, getBlog } from "../flow/cadence_code_emulator";
 const Section11 = () => {
   const { add, id } = useParams();
   const [blog, setBlog] = useState(null);
+  const [type,setType]=useState("PRIVATE");
   useEffect(() => {
     getPublicBlog();
   }, []);
@@ -37,11 +38,11 @@ const Section11 = () => {
     for (let i in blogsArray) {
       if (blogsArray[i].id === id) {
         setBlog(blogsArray[i]);
+        setType(blogsArray[i].type);
         break;
       }
     }
   }
-
   async function getPrivateBlog() {
     const signData = await signMessage();
     console.log(signData);
@@ -56,7 +57,10 @@ const Section11 = () => {
         arg(signData[3], t.Int),
       ],
     });
-    console.log(response);
+    setBlog(response);
+    blog.body=response.body;
+    setType("PUBLIC");
+    console.log(blog);
   }
 
   const signMessage = async () => {
@@ -159,7 +163,7 @@ const Section11 = () => {
                 border: "none",
               }}
             />
-            {blog.type == "PUBLIC" ? (
+            {type == "PUBLIC" ? (
               <main
                 className=""
                 style={{
@@ -171,7 +175,7 @@ const Section11 = () => {
                   padding: "20px",
                 }}
               >
-                Here is the blog
+                {blog.body};
               </main>
             ) : (
               <button onClick={getPrivateBlog}>Sign Message</button>
