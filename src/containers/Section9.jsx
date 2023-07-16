@@ -47,7 +47,7 @@ export default function Section9() {
         arg(name, t.String),
         arg(ipfsCid, t.String),
         arg(description, t.String),
-        arg(price, t.UFix64),
+        arg(price.toFixed(1), t.UFix64),
       ],
       proposer: fcl.authz,
       payer: fcl.authz,
@@ -116,6 +116,7 @@ export default function Section9() {
           onChange={(e) => setPrice(e.target.value)}
           placeholder="Provide only UFix64"
           className="form-boxes box-height"
+          type="number"
         />
       </div>
       <div className="fifth-part">

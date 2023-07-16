@@ -948,9 +948,3 @@ pub fun main():{Address:UFix64}{
 }
 `;
 
-export const isBlogger = `
-pub fun main(user: Address): Bool{
-    let acct = getAccount(user);
-    return acct.contracts.names.contains("BlogManager");
-}
-`;
