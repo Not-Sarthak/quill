@@ -68,7 +68,7 @@ pub contract SubscriptionsManager {
 export const BlogManager = `
 import FungibleToken from 0xFungibleToken
 import FlowToken from 0xFlowToken
-import SubscriptionsManager from 0xf8d6e0586b0a20c7 // address of the global subscriber account
+import SubscriptionsManager from 0xDeployer // address of the global subscriber account
 
 pub contract BlogManager {
 
@@ -729,44 +729,12 @@ transaction {
     }
 }
 `;
-export const _TransferFlow = `
-
-import FungibleToken from 0xFungibleToken
-import FlowToken from 0xFlowToken
-
-transaction(amount: UFix64, to: Address) {
-
-    // The Vault resource that holds the tokens that are being transferred
-    let sentVault: @FungibleToken.Vault
-
-    prepare(signer: AuthAccount) {
-
-        // Get a reference to the signer's stored vault
-        let vaultRef = signer.borrow<&FlowToken.Vault>(from: /storage/flowTokenVault)
-			?? panic("Could not borrow reference to the owner's Vault!")
-
-        // Withdraw tokens from the signer's stored vault
-        self.sentVault <- vaultRef.withdraw(amount: amount)
-    }
-
-    execute {
-        // Get a reference to the recipient's Receiver
-        let receiverRef =  getAccount(to)
-            .getCapability(/public/flowTokenReceiver)
-            .borrow<&{FungibleToken.Receiver}>()
-			?? panic("Could not borrow receiver reference to the recipient's Vault")
-
-        // Deposit the withdrawn tokens in the recipient's receiver
-        receiverRef.deposit(from: <-self.sentVault)
-    }
-}
-`;
 export const Subscribe = `
 
 import FungibleToken from 0xFungibleToken
 import FlowToken from 0xFlowToken
 import BlogManager from 0xBlogger // address of the blogger account
-import SubscriptionsManager from 0xf8d6e0586b0a20c7 // address of the global subscriber account
+import SubscriptionsManager from 0xDeployer // address of the global subscriber account
 
 transaction(amount: UFix64) {
 
@@ -836,43 +804,6 @@ transaction(name: String, avatar: String, bio: String, subscriptionCost: UFix64)
     }
 }
 `;
-export const _verifySign = `
-pub fun main(address: Address, message: String, signature: String, keyIndex: Int) : Bool {
-
-    let account = getAccount(address)
-    let publicKeys = account.keys.get(keyIndex: keyIndex) ?? panic("No key with that index in account")
-    let publicKey = publicKeys.publicKey
-
-    let sign = signature.decodeHex()
-    let msg = message.decodeHex()
-
-    return publicKey.verify(
-        signature: sign,
-        signedData: msg,
-        domainSeparationTag: "",
-        hashAlgorithm: HashAlgorithm.SHA3_256
-    )
-    
-}
-
-`;
-export const _tst = `
-import SubscriptionsManager from 0xf8d6e0586b0a20c7 // address of the global subscriber account
-// import BlogManager from 0xBlogger
-
-pub fun main(): Bool {
-    let account = getAccount(0xf8d6e0586b0a20c7)
-    // let capa: DeployedContract = account.contracts.get(name:"BlogManager") ?? panic("Could not find contract")
-    // account.contracts.get(name:"MyContract")!.publicTypes()
-    // let typ = capa.publicTypes()[0].getType()
-    // let cap = account.getCapability(/public/BlogCollection);
-    let capa = account.getCapability<&SubscriptionsManager.Subscriptions>(SubscriptionsManager.SubscriptionsPublicPath).borrow() ?? panic("Could not borrow capability Subscriptions from Blogger's public path")
-
-
-    return true
-
-}
-`;
 export const getOwnerInfo = `
 import BlogManager from 0xBlogger
 
@@ -890,7 +821,7 @@ pub fun main(): {String: String}
 
 `;
 export const getSubscriptions = `
-import SubscriptionsManager from 0xf8d6e0586b0a20c7 // address of the global subscriber account
+import SubscriptionsManager from 0xDeployer // address of the global subscriber account
 
 pub fun main(reader:Address): [Address] {
 
