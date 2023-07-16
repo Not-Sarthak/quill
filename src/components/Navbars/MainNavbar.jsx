@@ -8,7 +8,7 @@ import {
   useTheme,
 } from "@mui/material";
 import React, { Children } from "react";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { NAVBAR_HEIGHT } from "../../constants";
 import useScrollPosition from "../../hooks/useScrollPosition";
 import { navbarContent } from "../../utils/content";
@@ -21,13 +21,12 @@ import "../../App.css";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import Community from "../../pages/Community";
 import { useAuth } from "../../utils/AuthContext";
-import { getContracts } from "../../flow/cadence_code_testnet";
+import { isBlogger } from "../../flow/cadence_code_testnet";
 import * as fcl from "@onflow/fcl";
 
 const { Logo } = navbarContent;
 
 const LinkButton = ({ children, ...props }) => (
-
   <Stack
     direction="row"
     alignItems="center"
@@ -46,22 +45,15 @@ const LinkButton = ({ children, ...props }) => (
 const Navbar = () => {
   const { user, logOut, logIn } = useAuth();
   const [showMenu, setshowMenu] = useState(false);
-  const [isBlogger,setBlogger] = useState(false);
-  // checkBlogger();
-
-  // useEffect(()=>{
-  //   checkBlogger();
-  // },[]);
-
-  // async function checkBlogger(){
-  //   console.log(user.addr);
-  //   fcl.config.put("0xBlogger",user.addr);  
-  //   const response=await fcl.query({
-  //     cadence:getContracts,
-  //     args:(arg,t)=>[]
-  //   });
-  //   console.log(response);
-  // }
+  const [blogger, setBlogger] = useState(false);
+  checkBlogger();
+  async function checkBlogger(){
+    const response=await fcl.query({
+      cadence:isBlogger,
+      args:(arg,t)=>[arg(user.addr,t.Address)]
+    });
+    console.log(response);
+  }
 
   const toggle = () => {
     setshowMenu(!showMenu);
@@ -131,7 +123,25 @@ const Navbar = () => {
               </LinkButton>
 
               <LinkButton>
-                <Typography variant="body2">Write Blog</Typography> {/* For become blogger */}
+                <Typography variant="body2">
+                  {blogger ? (
+                    <a
+                      href="/add"
+                      target="blank"
+                      style={{ color: "inherit", textDecoration: "none" }}
+                    >
+                      Add Blog
+                    </a>
+                  ) : (
+                    <a
+                      href="/create"
+                      target="blank"
+                      style={{ color: "inherit", textDecoration: "none" }}
+                    >
+                      Become Blogger
+                    </a>
+                  )}
+                </Typography>
                 <KeyboardArrowDownIcon fontSize="small" />
               </LinkButton>
 
