@@ -119,7 +119,12 @@ const Navbar = () => {
               </LinkButton>
 
               <LinkButton>
-                <Typography variant="body2">Memberships</Typography>
+                <Typography variant="body2"><a
+                    href="/memberships"
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    Memberships
+                  </a></Typography>
                 <KeyboardArrowDownIcon fontSize="small" />
               </LinkButton>
 

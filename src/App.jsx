@@ -11,6 +11,7 @@ import Writer from "./pages/Writer";
 import Footer from "../src/components/Footers/MainFooter";
 import Navbar from "../src/components/Navbars/MainNavbar";
 import AuthProvider from "./utils/AuthContext";
+import Memberships from "./pages/Memberships";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/details/:add/:id" element={<Details />} />
           <Route path="/display/:id/" element={<Display />} />
           <Route path="/writer" element={<Writer />} />
+          <Route path="/memberships" element={<Memberships />} />
         </Routes>
       </div>
     </AuthProvider>
