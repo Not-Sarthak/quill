@@ -37,17 +37,14 @@ const Section5 = () => (
       viewport={{ once: false, amount: 0.25 }}
       className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
     >
-      <TypingText title="| About Quill" textStyles="text-center" />
+      <TypingText className="linear-wipe" title="Quill" textStyles="text-center" />
 
       <motion.p
         variants={fadeIn('up', 'tween', 0.2, 1)}
         className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
       >
         <span className="font-extrabold text-white">Quill </span> 
-        is a web3 platform for bloggers who want to create a 
-        community and build a sustainable economy. It is built on the Flow blockchain, 
-        which gives bloggers more control over their content and allows them to 
-        monetize their work.{' '}
+        Welcome to our revolutionary blogging platform, where creativity and empowerment collide in a seamless digital universe. We are proud to present a 100% on-chain and completely decentralized web3 experience, built on the powerful Flow blockchain. With walletless onboarding, you can effortlessly dive into a world of boundless possibilities, leaving behind the complexities of traditional setups. Our platform introduces the concept of NFT memberships, unlocking exclusive perks and connections within our vibrant community. And with our stunningly beautiful UI/UX, navigating through captivating content becomes a visual delight. Join us today and witness the future of blogging, where every word is a masterpiece and every creator reigns supreme. Furthermore, our innovative platform allows you to not only write captivating blog posts but also create and mint your own NFTs. Seamlessly merge your artistic expressions with the blockchain, turning your words into unique digital assets. Be part of a thriving ecosystem where creativity is not only appreciated but also rewarded.{' '}
         <span className="font-extrabold text-white">
           It also allows the bloggers to convert their written art to writing nfts with
           only a single click.

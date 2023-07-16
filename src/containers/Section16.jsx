@@ -21,7 +21,7 @@ const Section16 = () => {
 
   return (
     <Box sx={{ width: "100%" }}>
-        <Box sx={{ zIndex: -10, top: 0, left: 0, right: 0 }}>
+        <Box sx={{zIndex: -8, top: 0, left: 0, right: 0 }}>
           <img src={Section} style={{ width: "100%" }} />
         </Box>
     </Box>

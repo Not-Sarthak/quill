@@ -12,6 +12,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+import Section5 from './Section5';
 
 const {
   title, subtitle,
@@ -20,6 +21,7 @@ const {
 const Section7 = () => {
   return (
     <div className='section7'>
+      <Section5/>
       <div className='main'>
       <Stack className="text" sx={{ height: "100%" }} justifyContent="center">
         <div className='mainTitle'>
@@ -33,13 +35,13 @@ const Section7 = () => {
         <div className='mainTitle'>
             <Title
               variant={{ xs: "custom", sm: "h2", md: "h1" }}
-              sx={{ letterSpacing: "0.02em", mb: 1 }}
+              sx={{ letterSpacing: "0.02em", mb: 5 }}
             >
               {subtitle}
             </Title>
         </div>
       </Stack>
-      <div className='contains'>
+      <div className='contains' style={{}}>
       <ul className='rows'>
         <li className='row-item'>Easy to use</li>
         <li className='row-item'>Decentralised</li>

@@ -9,7 +9,7 @@ const { SOCIALS } = section10Content;
 const Section6 = () => {
   return (
     <div className="section6">
-    <Container maxWidth="md" sx={{ mt: { xs: 10, md: 20, lg: 25 } }}>
+    <Container maxWidth="md" sx={{}}>
       <Title
         variant={{ xs: "h3", md: "h2" }}
         sx={{ textAlign: "center", mb: { xs: 5 } }}

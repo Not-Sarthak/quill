@@ -103,6 +103,18 @@ import Blog3 from "../assets/images/blogs/b3.jpg";
 // Section16
 import Section from "../assets/images/section16/section.png";
 
+// Section17
+import Feature1 from "../assets/images/section17/feature1.png";
+import Feature2 from "../assets/images/section17/feature2.png";
+import Feature3 from "../assets/images/section17/feature3.png";
+import Feature4 from "../assets/images/section17/feature4.png";
+import Feature5 from "../assets/images/section17/feature5.png";
+import Feature6 from "../assets/images/section17/feature6.png";
+
+export const section17Content = {
+  Feature1, Feature2, Feature3, Feature4, Feature5, Feature6
+}
+
 export const section16Content = {
   title: "100% Decentralized and On-chain",
   Section,

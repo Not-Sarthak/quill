@@ -53,7 +53,7 @@ const Section3 = () => {
         </div>
       </Stack>
       <div className="arrow">
-      <motion.div ref={carousel} className="carousel" whileTap={{cursor: "grabbing"}}>
+      <motion.div ref={carousel} className="carousel" whileTap={{cursor: "grabbing"}} style={{border: '1px solid #94b1e3', boxShadow: '0 20px 50px #71e5e5', marginTop: 6}}>
         <motion.div drag="x" dragConstraints={{right: 0, left: -width}} className="inner-carousel">
           {images.map(image => {
             return (
@@ -64,10 +64,11 @@ const Section3 = () => {
           })}
         </motion.div>
       </motion.div>
-      <ArrowRightIcon fontSize='large' sx={{mt:"13%"}}/>
+      <ArrowRightIcon fontSize='large' sx={{mt: "18%"}}/>
       </div>
     </div>
   )
 }
 
 export default Section3
+

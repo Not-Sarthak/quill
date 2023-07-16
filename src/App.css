@@ -53,6 +53,7 @@
 
 .arrow{
     display: flex;
+    margin-top: 20px;
 }
 
 
@@ -631,3 +632,70 @@
   .toggle .line3 {
     transform: rotate(45deg) translate(-4px, -5px);
   }
+
+  .linear-wipe{
+    font-family: "Jakarta, sans-serif";
+    text-align: center;
+    background: linear-gradient(to right, #adeeee 0%, #8ee9e9 10%, #84c2e3 20%, #7be7e7 40%, #90b7e3 50%, #c282e3 60%, #90b7e3 70%, #7be7e7 80%, #8ee9e9 90%,  #adeeee 100%);
+    background-size: 200% auto;
+    font-size: 84px;
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: shine 5s linear infinite;
+    }
+    @keyframes shine {
+      to {
+        background-position: 200% center;
+      }
+    }
+    .linear-wipe2{
+      font-family: "Jakarta, sans-serif";
+      text-align: center;
+      background: linear-gradient(to right, #adeeee 0%, #8ee9e9 10%, #84c2e3 20%, #7be7e7 40%, #90b7e3 50%, #c282e3 60%, #90b7e3 70%, #7be7e7 80%, #8ee9e9 90%,  #adeeee 100%);
+      background-size: 200% auto;
+      font-size: 54px;
+      color: #000;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+      animation: shine 5s linear infinite;
+      }
+      @keyframes shine {
+        to {
+          background-position: 200% center;
+        }
+      }
+
+      .linear-wipe3{
+        font-family: "Jakarta, sans-serif";
+        text-align: center;
+        background: linear-gradient(to right, #adeeee 0%, #8ee9e9 10%, #84c2e3 20%, #7be7e7 40%, #90b7e3 50%, #c282e3 60%, #90b7e3 70%, #7be7e7 80%, #8ee9e9 90%,  #adeeee 100%);
+        background-size: 200% auto;
+        font-size: 40px;
+        color: #000;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+        animation: shine 5s linear infinite;
+        }
+        @keyframes shine {
+          to {
+            background-position: 200% center;
+          }
+        }
+  .f-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 1rem;
+    padding-left: 6rem;
+  }
+  
