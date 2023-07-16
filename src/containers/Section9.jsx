@@ -13,7 +13,7 @@ export default function Section9() {
   const [description, setDescription] = useState("");
   const [preview, setPreview] = useState("");
   const [ipfsCid, setIpfsCid] = useState("");
-  const [price, setPrice] = useState(0);
+  let [price, setPrice] = useState(0);
   const { user } = useAuth();
   const NFT_STORAGE_TOKEN = import.meta.env.VITE_PUBLIC_NFTSTORAGE_KEY;
   const client = new NFTStorage({ token: NFT_STORAGE_TOKEN });
@@ -38,6 +38,11 @@ export default function Section9() {
     });
     console.log("Contract Deployed", deploymentID);
     await fcl.reauthenticate();
+    if (Number.isInteger(price)) {
+      price = price.toString() + ".0";
+    }
+    price=Number(price);
+    if(Number.isInteger(price)) price=price.toString()+".0";
     const settingID = await fcl.mutate({
       cadence: SetOwnerDetails,
       args: (arg, t) => [
