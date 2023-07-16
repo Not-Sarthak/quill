@@ -694,15 +694,6 @@ transaction(title: String, description: String, body: String, author: String, ba
         let blogCollectionRef = signer.getCapability<&BlogManager.BlogCollection>(BlogManager.BlogCollectionPublicPath).borrow() ?? panic("Signer is not a Blogger")
 
         BlogManager.createBlog(title:title,description:description,body:body,author:author,bannerImg:bannerImg,type:self.blogType, blogCollection: blogCollectionRef)
-
-        BlogManager.createBlog(title:"First Blog",description:"First Blog",body:"First Blog",author:"XYZ",bannerImg:"",type:BlogManager.BlogType.PUBLIC, blogCollection: blogCollectionRef)
-
-        BlogManager.createBlog(title:"Second Blog",description:"Second Blog",body:"Second Blog",author:"XYZ",bannerImg:"",type:BlogManager.BlogType.PUBLIC, blogCollection: blogCollectionRef)
-
-        BlogManager.createBlog(title:"Third Blog",description:"Third Blog",body:"Third Blog",author:"XYZ",bannerImg:"",type:BlogManager.BlogType.PRIVATE, blogCollection: blogCollectionRef)
-
-        BlogManager.createBlog(title:"Fourth Blog",description:"Fourth Blog",body:"Fourth Blog",author:"XYZ",bannerImg:"",type:BlogManager.BlogType.PRIVATE, blogCollection: blogCollectionRef)
-
     }
 }
 `;

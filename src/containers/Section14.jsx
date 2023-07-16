@@ -4,7 +4,6 @@ import "../App.css";
 import "../components/Search/style.css";
 
 const Section14 = (props) => {
-  // console.log(props);
   return (
     <div
       className="headline"

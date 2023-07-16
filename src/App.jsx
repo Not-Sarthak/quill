@@ -21,8 +21,8 @@ const App = () => {
           <Route path="/community" element={<Community />} />
           <Route path="/create" element={<Create />} />
           <Route path="/add" element={<Add />} />
-          <Route path="/details/:id" element={<Details />} />
-          <Route path="/display/:id" element={<Display />} />
+          <Route path="/details/:add/:id" element={<Details />} />
+          <Route path="/display/:id/" element={<Display />} />
           <Route path="/writer" element={<Writer />} />
         </Routes>
       </div>

@@ -5,7 +5,7 @@ import { useAuth } from "../utils/AuthContext";
 import { useNavigate } from "react-router-dom";
 import "../flow/config";
 import { Button, Typography } from "@mui/material";
-import { CreateBlog ,getAllBlogs} from "../flow/cadence_code_emulator";
+import { CreateBlog ,getAllBlogs} from "../flow/cadence_code_testnet";
 import * as fcl from "@onflow/fcl";
 
 const Section10 = () => {
@@ -23,6 +23,7 @@ const Section10 = () => {
 
   async function uploadToIPFS(file) {
     let prev = URL.createObjectURL(file);
+    setPreview(prev);
     const cid = await client.storeBlob(file);
     setIpfsCid(cid);
     console.log("Uploaded:", cid);
