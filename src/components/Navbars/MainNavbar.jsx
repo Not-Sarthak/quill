@@ -21,7 +21,7 @@ import "../../App.css";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import Community from "../../pages/Community";
 import { useAuth } from "../../utils/AuthContext";
-import { isBlogger } from "../../flow/cadence_code_testnet";
+import { isBlogger } from "../../flow/cadence_code_emulator";
 import * as fcl from "@onflow/fcl";
 
 const { Logo } = navbarContent;
@@ -47,11 +47,12 @@ const Navbar = () => {
   const [showMenu, setshowMenu] = useState(false);
   const [blogger, setBlogger] = useState(false);
   checkBlogger();
-  async function checkBlogger(){
-    const response=await fcl.query({
-      cadence:isBlogger,
-      args:(arg,t)=>[arg(user.addr,t.Address)]
+  async function checkBlogger() {
+    const response = await fcl.query({
+      cadence: isBlogger,
+      args: (arg, t) => [arg(user.addr, t.Address)],
     });
+    setBlogger(response);
     console.log(response);
   }
 

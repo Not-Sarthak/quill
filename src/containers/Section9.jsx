@@ -3,10 +3,7 @@ import * as fcl from "@onflow/fcl";
 import { NFTStorage } from "nft.storage";
 import "../App.css";
 import { useAuth } from "../utils/AuthContext";
-import {
-  DeployContract,
-  SetOwnerDetails,
-} from "../flow/cadence_code_testnet";
+import { DeployContract, SetOwnerDetails } from "../flow/cadence_code_emulator";
 import { v4 as uuidv4 } from "uuid";
 import "../flow/config";
 import { useNavigate } from "react-router-dom";
@@ -27,7 +24,7 @@ export default function Section9() {
     setPreview(prev);
     const cid = await client.storeBlob(file);
     setIpfsCid(cid);
-    console.log("Uploaded",cid);
+    console.log("Uploaded", cid);
   }
 
   async function createBlogger() {
@@ -47,7 +44,7 @@ export default function Section9() {
         arg(name, t.String),
         arg(ipfsCid, t.String),
         arg(description, t.String),
-        arg(price.toFixed(1), t.UFix64),
+        arg(price, t.UFix64),
       ],
       proposer: fcl.authz,
       payer: fcl.authz,
@@ -56,13 +53,18 @@ export default function Section9() {
     });
     console.log("Owner Details Set", settingID);
     navigate("/add");
-    console.log(`https://quill-helper.onrender.com/bloggers?name=${name}&address=${user.addr}&bio=${description}&avatar=${ipfsCid}&subscriptionCost=${price}`);
-    const response = await fetch(`https://quill-helper.onrender.com/bloggers?name=${name}&address=${user.addr}&bio=${description}&avatar=${ipfsCid}&subscriptionCost=${price}`, {
-      method: "POST",
-      headers: {
-        KEY: import.meta.env.VITE_FLASK_KEY,
+    console.log(
+      `https://quill-helper.onrender.com/bloggers?name=${name}&address=${user.addr}&bio=${description}&avatar=${ipfsCid}&subscriptionCost=${price}`
+    );
+    const response = await fetch(
+      `https://quill-helper.onrender.com/bloggers?name=${name}&address=${user.addr}&bio=${description}&avatar=${ipfsCid}&subscriptionCost=${price}`,
+      {
+        method: "POST",
+        headers: {
+          KEY: import.meta.env.VITE_FLASK_KEY,
+        },
       }
-    });
+    );
     console.log(response);
   }
 
@@ -70,17 +72,19 @@ export default function Section9() {
     <div className="section9">
       <div className="section9-heading">
         <h1 className="form-heading">Make your Mark by</h1>
-        <h1 className="form-heading" id="ok">Onboarding yourself with us</h1>
+        <h1 className="form-heading" id="ok">
+          Onboarding yourself with us
+        </h1>
       </div>
       <div className="first-part">
         <h1 className="form-steps">1. Configure</h1>
         <div className="">
           <label className="img-section" htmlFor="upload-button">
-                    {preview ? (
-                      <img src={preview} className="banner" alt="dummy" />
-                    ) : (
-                      <h1 className="img-data">Upload Community Logo</h1>
-                    )}
+            {preview ? (
+              <img src={preview} className="banner" alt="dummy" />
+            ) : (
+              <h1 className="img-data">Upload Community Logo</h1>
+            )}
           </label>
           <input
             className="hidden form-boxes"
@@ -93,7 +97,9 @@ export default function Section9() {
         </div>
       </div>
       <div className="second-part">
-        <label className=""><h1 className="form-steps">2. Community Name</h1></label>
+        <label className="">
+          <h1 className="form-steps">2. Community Name</h1>
+        </label>
         <input
           type="text"
           placeholder="CoffeeDAO"
@@ -102,7 +108,9 @@ export default function Section9() {
         />
       </div>
       <div className="third-part">
-        <label className="description"><h1 className="form-steps">3. Description</h1></label>
+        <label className="description">
+          <h1 className="form-steps">3. Description</h1>
+        </label>
         <textarea
           className="form-boxes inside"
           rows={8}
@@ -111,7 +119,9 @@ export default function Section9() {
         />
       </div>
       <div className="fourth-part">
-        <label className="price"><h1 className="form-steps">4. Price</h1></label>
+        <label className="price">
+          <h1 className="form-steps">4. Price</h1>
+        </label>
         <input
           onChange={(e) => setPrice(e.target.value)}
           placeholder="Provide only UFix64"
@@ -120,7 +130,7 @@ export default function Section9() {
         />
       </div>
       <div className="fifth-part">
-      <h1 className="form-steps">5. Finish</h1>
+        <h1 className="form-steps">5. Finish</h1>
         <button
           className="final-button"
           disabled={!user.loggedIn}

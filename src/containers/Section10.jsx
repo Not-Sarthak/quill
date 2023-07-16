@@ -5,7 +5,7 @@ import { useAuth } from "../utils/AuthContext";
 import { useNavigate } from "react-router-dom";
 import "../flow/config";
 import { Button, Typography } from "@mui/material";
-import { CreateBlog ,getAllBlogs} from "../flow/cadence_code_testnet";
+import { CreateBlog, getAllBlogs } from "../flow/cadence_code_emulator";
 import * as fcl from "@onflow/fcl";
 
 const Section10 = () => {
@@ -34,13 +34,13 @@ const Section10 = () => {
     const addId = await fcl.mutate({
       cadence: CreateBlog,
       args: (arg, t) => [
-            arg(title, t.String),
-            arg(description, t.String),
-            arg(blog, t.String),
-            arg(author, t.String),
-            arg(cid, t.String),
-            arg(type, t.String),
-          ],
+        arg(title, t.String),
+        arg(description, t.String),
+        arg(blog, t.String),
+        arg(author, t.String),
+        arg(cid, t.String),
+        arg(type, t.String),
+      ],
       proposer: fcl.authz,
       payer: fcl.authz,
       authorizations: [fcl.authz],
@@ -57,37 +57,41 @@ const Section10 = () => {
             Share your thoughts and let the world know it
           </h1>
           <form className="form-data">
-          <div className="">
-          <label className="img-section" htmlFor="upload-button">
-                    {preview ? (
-                      <img src={preview} className="banner" alt="dummy" />
-                    ) : (
-                      <h1 className="img-data">Upload Banner Image</h1>
-                    )}
-          </label>
-          <input
-            className="hidden form-boxes"
-            id="upload-button"
-            type="file"
-            accept="image/*"
-            hidden
-            onChange={(e) => uploadToIPFS(e.target.files[0])}
-          />
-        </div>
+            <div className="">
+              <label className="img-section" htmlFor="upload-button">
+                {preview ? (
+                  <img src={preview} className="banner" alt="dummy" />
+                ) : (
+                  <h1 className="img-data">Upload Banner Image</h1>
+                )}
+              </label>
+              <input
+                className="hidden form-boxes"
+                id="upload-button"
+                type="file"
+                accept="image/*"
+                hidden
+                onChange={(e) => uploadToIPFS(e.target.files[0])}
+              />
+            </div>
             <br />
-            <label><h1 className="form-steps">Title</h1></label>
+            <label>
+              <h1 className="form-steps">Title</h1>
+            </label>
             <input
               type="text"
-              style={{paddingLeft: 10}}
+              style={{ paddingLeft: 10 }}
               className="title-input form-boxes img-data"
               placeholder="Title"
               onChange={(e) => setTitle(e.target.value)}
             />
             <br />
-            <label><h1 className="form-steps">Description</h1></label>
+            <label>
+              <h1 className="form-steps">Description</h1>
+            </label>
             <textarea
               name="description"
-              style={{paddingLeft: 10}}
+              style={{ paddingLeft: 10 }}
               id=""
               cols="30"
               rows="2"
@@ -96,28 +100,32 @@ const Section10 = () => {
               onChange={(e) => setDescription(e.target.value)}
             ></textarea>
             <br />
-            <label><h1 className="form-steps">Author's Name</h1></label>
+            <label>
+              <h1 className="form-steps">Author's Name</h1>
+            </label>
             <input
               type="text"
               className="author-content form-boxes img-data"
               placeholder="Name"
-              style={{paddingLeft: 10}}
+              style={{ paddingLeft: 10 }}
               onChange={(e) => setAuthor(e.target.value)}
             />
             <br />
-            <label><h1 className="form-steps">Blog</h1></label>
+            <label>
+              <h1 className="form-steps">Blog</h1>
+            </label>
             <textarea
               name="blog"
               id="blog-content"
               className="form-boxes img-data"
-              style={{paddingLeft: 10}}
+              style={{ paddingLeft: 10 }}
               placeholder="Blog"
               onChange={(e) => setBlog(e.target.value)}
             ></textarea>
             <br />
             <select
               id="mounth"
-              style={{width: "40%", paddingLeft: 10, height: 40}}
+              style={{ width: "40%", paddingLeft: 10, height: 40 }}
               className="form-boxes img-data"
               defaultValue="private"
               onChange={(e) => setType(e.target.value)}
