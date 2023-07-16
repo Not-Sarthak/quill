@@ -3,7 +3,7 @@ import * as fcl from "@onflow/fcl";
 import { NFTStorage } from "nft.storage";
 import "../App.css";
 import { useAuth } from "../utils/AuthContext";
-import { DeployContract, SetOwnerDetails } from "../flow/cadence_code_emulator";
+import { DeployContract, SetOwnerDetails } from "../flow/cadence_code_testnet";
 import { v4 as uuidv4 } from "uuid";
 import "../flow/config";
 import { useNavigate } from "react-router-dom";
@@ -41,8 +41,8 @@ export default function Section9() {
     if (Number.isInteger(price)) {
       price = price.toString() + ".0";
     }
-    price=Number(price);
-    if(Number.isInteger(price)) price=price.toString()+".0";
+    price = Number(price);
+    if (Number.isInteger(price)) price = price.toString() + ".0";
     const settingID = await fcl.mutate({
       cadence: SetOwnerDetails,
       args: (arg, t) => [

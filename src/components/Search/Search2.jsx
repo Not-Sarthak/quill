@@ -6,7 +6,7 @@ import * as fcl from "@onflow/fcl";
 import {
   getOwnerInfo,
   getSubscriptions,
-} from "../../flow/cadence_code_emulator";
+} from "../../flow/cadence_code_testnet";
 import { useAuth } from "../../utils/AuthContext";
 
 function App() {

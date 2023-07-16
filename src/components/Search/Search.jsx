@@ -3,7 +3,7 @@ import "./style.css";
 import Explore from "../Buttons/Explore";
 import Create from "../Buttons/Create";
 import * as fcl from "@onflow/fcl";
-import { getOwnerInfo } from "../../flow/cadence_code_emulator";
+import { getOwnerInfo } from "../../flow/cadence_code_testnet";
 
 function App() {
   useEffect(() => {

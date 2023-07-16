@@ -3,7 +3,7 @@ import Explore from "../Buttons/Explore";
 import "../../App.css";
 import { useState, useEffect } from "react";
 import * as fcl from "@onflow/fcl";
-import { getOwnerInfo } from "../../flow/cadence_code_emulator";
+import { getOwnerInfo } from "../../flow/cadence_code_testnet";
 
 const BloggerCard = ({ address, index }) => {
   console.log(address, index);

@@ -21,7 +21,7 @@ import "../../App.css";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import Community from "../../pages/Community";
 import { useAuth } from "../../utils/AuthContext";
-import { isBlogger } from "../../flow/cadence_code_emulator";
+import { isBlogger } from "../../flow/cadence_code_testnet";
 import * as fcl from "@onflow/fcl";
 
 const { Logo } = navbarContent;
@@ -119,12 +119,14 @@ const Navbar = () => {
               </LinkButton>
 
               <LinkButton>
-                <Typography variant="body2"><a
+                <Typography variant="body2">
+                  <a
                     href="/memberships"
                     style={{ color: "inherit", textDecoration: "none" }}
                   >
                     Memberships
-                  </a></Typography>
+                  </a>
+                </Typography>
                 <KeyboardArrowDownIcon fontSize="small" />
               </LinkButton>
 
