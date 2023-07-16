@@ -14,6 +14,7 @@ import * as fcl from "@onflow/fcl";
 import { Subscribe, isSubscribed } from "../../flow/cadence_code_testnet";
 import { useAuth } from "../../utils/AuthContext";
 
+
 const Join = (props) => {
   const { user } = useAuth();
   const { id } = useParams();
