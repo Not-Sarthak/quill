@@ -6,7 +6,7 @@ import { useAuth } from "../utils/AuthContext";
 import {
   DeployContract,
   SetOwnerDetails,
-} from "../flow/cadence_code_emulator";
+} from "../flow/cadence_code_testnet";
 import { v4 as uuidv4 } from "uuid";
 import "../flow/config";
 import { useNavigate } from "react-router-dom";

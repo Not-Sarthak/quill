@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Individual from "../components/Cards/Individual.jsx";
 import * as fcl from "@onflow/fcl";
-import { getAllBlogs } from "../flow/cadence_code_emulator";
+import { getAllBlogs } from "../flow/cadence_code_testnet.js";
 import { useParams } from "react-router-dom";
 
 const Section13 = () => {

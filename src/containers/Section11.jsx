@@ -12,7 +12,7 @@ import {
   useAnimate,
 } from "framer-motion";
 import * as fcl from "@onflow/fcl";
-import { getAllBlogs, getBlog } from "../flow/cadence_code_emulator";
+import { getAllBlogs, getBlog } from "../flow/cadence_code_testnet";
 
 <style>
   @import
