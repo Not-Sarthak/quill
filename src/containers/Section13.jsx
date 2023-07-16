@@ -11,7 +11,6 @@ const Section13 = () => {
   const [blogsArray, setData] = useState([]);
   const { id } = useParams();
   async function getBlogs() {
-    // console.log(id);
     fcl.config.put("0xBlogger", id);
 
     const response = await fcl.query({
@@ -21,15 +20,15 @@ const Section13 = () => {
     // console.log(response);
     setData(Object.values(response));
   }
-
+  // console.log(blogsArray);
   return (
     <div className="trip">
-      {/* <h1>Free Blogs</h1>
-      <p>Discover and gain insights about your topic of interest</p> */}
       <div className="blog">
         {blogsArray.map((blog) => {
           return (
             <Individual
+              id={blog.id}
+              add={id}
               key={blog.id}
               type={blog.type}
               image={blog.bannerImg}

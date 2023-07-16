@@ -1,9 +1,15 @@
 import React from 'react';
 import "../../App.css";
+import { useNavigate } from 'react-router-dom';
 
 const Individual = (props) => {
+    const navigate=useNavigate();
+    function handleClick(){
+        navigate(`/details/${props.add}/${props.id}`);
+    }
+
     return (
-        <div className="blog-card">
+        <div className="blog-card" onClick={handleClick}>
             <div className="blog-image">
                 <img src={`https://nftstorage.link/ipfs/${props.image}`} alt="banner" />
             </div>

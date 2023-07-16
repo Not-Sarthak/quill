@@ -23,6 +23,7 @@ const Section10 = () => {
 
   async function uploadToIPFS(file) {
     let prev = URL.createObjectURL(file);
+    setPreview(prev);
     const cid = await client.storeBlob(file);
     setIpfsCid(cid);
     console.log("Uploaded:", cid);

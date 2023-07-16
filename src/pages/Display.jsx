@@ -19,6 +19,7 @@ const Display = () => {
       },
     });
     response.json().then((data) => setData(data));
+    console.log(bloggerData);
   }
   return (
     <div>
