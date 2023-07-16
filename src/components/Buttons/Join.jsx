@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { useParams } from "react-router-dom";
 import * as fcl from "@onflow/fcl";
-import { Subscribe, isSubscribed } from "../../flow/cadence_code_emulator";
+import { Subscribe, isSubscribed } from "../../flow/cadence_code_testnet";
 import { useAuth } from "../../utils/AuthContext";
 
 const Join = (props) => {
