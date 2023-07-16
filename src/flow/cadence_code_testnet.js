@@ -947,4 +947,3 @@ pub fun main():{Address:UFix64}{
 
 }
 `;
-
