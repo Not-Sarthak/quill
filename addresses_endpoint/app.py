@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from db import get_addresses, insert_address
 import os
 
 app = Flask(__name__)
+
+CORS(app, supports_credentials=True, allow_headers=["Content-Type", "KEY"])
 
 # get env variable
 API_KEY = os.environ.get('API_KEY')
