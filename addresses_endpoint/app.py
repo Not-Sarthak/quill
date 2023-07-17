@@ -13,6 +13,7 @@ API_KEY = os.environ.get('API_KEY')
 @app.after_request
 def disable_cors(response):
     response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Headers'] = '*'
     return response
 
 @app.route('/bloggers', methods=['GET'])
