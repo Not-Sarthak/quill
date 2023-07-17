@@ -27,3 +27,4 @@ dist-ssr
 addresses_endpoint/__pycache__/*
 addresses_endpoint/venv/*
 addresses_endpoint/addresses.db
+tirthb.pkey
