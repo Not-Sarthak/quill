@@ -3,6 +3,7 @@ import Individual from "../components/Cards/Individual.jsx";
 import * as fcl from "@onflow/fcl";
 import { getAllBlogs } from "../flow/cadence_code_testnet.js";
 import { useParams } from "react-router-dom";
+import "../App.css"
 
 const Section13 = () => {
   useEffect(() => {
@@ -23,7 +24,7 @@ const Section13 = () => {
   // console.log(blogsArray);
   return (
     <div className="trip">
-      <div className="blog">
+      <div className="blog" style={{display: "grid", gridTemplateColumns: "repeat(3,1fr)", gridGap: "20px", width: "100%"}}>
         {blogsArray.map((blog) => {
           return (
             <Individual

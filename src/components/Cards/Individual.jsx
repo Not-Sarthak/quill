@@ -10,17 +10,17 @@ const Individual = (props) => {
 
     return (
         <div className="blog-card" onClick={handleClick}>
+            <p className="type-blog" style={{marginLeft: "70%", position: "relative", border: "1px solid #97feed", borderRadius: 20, display: "flex", justifyContent: "center", alignItems: "center"}}>{props.type}</p>
             <div className="blog-image">
-                <img src={`https://nftstorage.link/ipfs/${props.image}`} alt="banner" />
+                <img src={`https://nftstorage.link/ipfs/${props.image}`} alt="banner"/>
             </div>
-            <div className="card-data">
+            <div className="card-data" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                 <h4>
                     {props.heading}
                 </h4>
                 <p>
                     {props.text}
                 </p>
-                <p>{props.type}</p>
             </div>
         </div>
     )

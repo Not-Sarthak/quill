@@ -178,7 +178,7 @@ const Section11 = () => {
                 {blog.body};
               </main>
             ) : (
-              <button onClick={getPrivateBlog}>Sign Message</button>
+              <button onClick={getPrivateBlog} className="sign-msg">Sign Message</button>
             )}
           </div>
         </section>

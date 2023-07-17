@@ -487,6 +487,7 @@
   .trip{
     margin: 4rem 6rem;
     color: white;
+    display: grid;
   }
   .trip h1{
     font-size: 3rem;
@@ -495,15 +496,21 @@
     margin-top: 3rem;
     display: flex;
     justify-content: space-between;
+    color: #97FEED;
   }
   .blog-card{
-    width: 30%;
+    width: 90%;
+    height: 100%;
     text-align: start;
     box-shadow: 0 5px 25px 2px #58a796;
     border-radius: 7px;
     cursor: pointer;
     padding: 1rem 0.8rem;
     border: 1px solid #58a796;
+    overflow: hidden;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
   }
   .card-data{
     display: flex;
@@ -698,4 +705,18 @@
     margin: 1rem;
     padding-left: 6rem;
   }
+
+.sign-msg{
+  width: 130.55px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #a8f0cb;
+  justify-content: 'flex-start';
+  align-items: 'flex-start';
+  color: #9d717a;
+  background: #e5cdd6;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: 14px;
+}
   
