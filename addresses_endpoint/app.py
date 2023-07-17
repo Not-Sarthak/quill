@@ -1,14 +1,16 @@
 from flask import Flask, request, jsonify
 from db import get_addresses, insert_address
 import os
-from flask_cors import CORS
 
 app = Flask(__name__)
 
-CORS(app, origins='https://btirth.me')
-
 # get env variable
 API_KEY = os.environ.get('API_KEY')
+
+@app.after_request
+def disable_cors(response):
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    return response
 
 @app.route('/bloggers', methods=['GET'])
 def bloggers_get():
