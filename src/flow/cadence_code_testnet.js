@@ -18,7 +18,7 @@ pub contract SubscriptionsManager {
 
     pub resource Subscriptions: SubscriptionsPub, SubscriptionsPriv {
 
-        priv let subscribedTo: {Address: Bool};
+        priv var subscribedTo: {Address: Bool};
         priv let subscriber: Address;
 
         init(_ subscriber: Address) {
@@ -798,6 +798,9 @@ transaction(amount: UFix64) {
 
     execute {
         if BlogManager.subscribe(self.signerAddress, vault: <- self.sentVault, subscriptions: self.subscriptionsPrivate){
+            
+            SubscriptionsManager.subscribe(blogger: 0xBlogger, reader: self.signerAddress, subscriptions: self.subscriptionsPrivate)
+
             log("Subscribed to blog")
         }
         else {
